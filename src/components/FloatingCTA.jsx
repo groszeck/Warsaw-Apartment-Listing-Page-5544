@@ -15,7 +15,7 @@ const FloatingCTA = ({ onContactClick }) => {
     >
       {/* Phone Button */}
       <motion.a
-        href="tel:602000000"
+        href="tel:538530676"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className="bg-blue-600 hover:bg-blue-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-colors group"

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const { FiPhone, FiMail, FiMapPin, FiClock, FiUser, FiSend, FiCalendar } = FiIcons;
+const { FiPhone, FiMail, FiMapPin, FiClock, FiUser, FiSend, FiCalendar, FiCheck, FiDollarSign } = FiIcons;
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -22,15 +22,14 @@ const ContactSection = () => {
     const today = new Date();
     const year = currentMonth.getFullYear();
     const month = currentMonth.getMonth();
-    
     const firstDay = new Date(year, month, 1);
     const lastDay = new Date(year, month + 1, 0);
     const startDate = new Date(firstDay);
     startDate.setDate(startDate.getDate() - firstDay.getDay());
-    
+
     const days = [];
     const currentDate = new Date(startDate);
-    
+
     // Generate 42 days (6 weeks)
     for (let i = 0; i < 42; i++) {
       const dayData = {
@@ -43,11 +42,10 @@ const ContactSection = () => {
         isWeekend: currentDate.getDay() === 0 || currentDate.getDay() === 6,
         availability: getAvailabilityForDate(currentDate)
       };
-      
       days.push(dayData);
       currentDate.setDate(currentDate.getDate() + 1);
     }
-    
+
     return days;
   };
 
@@ -93,6 +91,7 @@ const ContactSection = () => {
           available: Math.random() > 0.3
         });
       }
+      
       // Afternoon slots
       for (let hour = 14; hour <= 17; hour++) {
         slots.push({
@@ -206,6 +205,41 @@ const ContactSection = () => {
           </p>
         </motion.div>
 
+        {/* Direct Offer Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-3xl p-8 mb-12 shadow-xl"
+        >
+          <div className="text-center">
+            <h3 className="text-3xl font-bold mb-4">
+              ✨ OFERTA BEZPOŚREDNIA OD WŁAŚCICIELA ✨
+            </h3>
+            <p className="text-xl mb-6">
+              Kupuj bez pośredników i oszczędź nawet 20 000 zł na prowizji!
+            </p>
+            <div className="grid md:grid-cols-3 gap-4 text-center">
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
+                <SafeIcon icon={FiCheck} className="w-8 h-8 mx-auto mb-2" />
+                <h4 className="font-semibold">Bez agencji</h4>
+                <p className="text-sm opacity-90">Bezpośredni kontakt</p>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
+                <SafeIcon icon={FiDollarSign} className="w-8 h-8 mx-auto mb-2" />
+                <h4 className="font-semibold">Bez prowizji</h4>
+                <p className="text-sm opacity-90">Płacisz tylko cenę mieszkania</p>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
+                <SafeIcon icon={FiUser} className="w-8 h-8 mx-auto mb-2" />
+                <h4 className="font-semibold">Właściciel</h4>
+                <p className="text-sm opacity-90">Zbyszek Grochowski</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Info */}
           <motion.div
@@ -215,47 +249,43 @@ const ContactSection = () => {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 border border-blue-200">
+            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8 border border-green-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Dane kontaktowe
+                Dane kontaktowe właściciela
               </h3>
-              
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="bg-green-600 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
                     <SafeIcon icon={FiUser} className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Barbara Lorek</h4>
-                    <p className="text-gray-600">Agent nieruchomości</p>
-                    <p className="text-sm text-gray-500 mt-1">Doświadczenie: 8 lat</p>
+                    <h4 className="font-semibold text-gray-900">Zbyszek Grochowski</h4>
+                    <p className="text-green-600 font-medium">Właściciel mieszkania</p>
+                    <p className="text-sm text-gray-500 mt-1">Sprzedaż bezpośrednia</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
-                  <div className="bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="bg-green-600 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
                     <SafeIcon icon={FiPhone} className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">602 XXX XXX</h4>
+                    <h4 className="font-semibold text-gray-900">538 530 676</h4>
                     <p className="text-gray-600">Telefon</p>
                     <p className="text-sm text-gray-500 mt-1">Dostępny: Pn-Pt 9:00-18:00</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
-                  <div className="bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="bg-green-600 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
                     <SafeIcon icon={FiMail} className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">bl@example.com</h4>
+                    <h4 className="font-semibold text-gray-900">kontakt@zabrowska1c.pl</h4>
                     <p className="text-gray-600">Email</p>
                     <p className="text-sm text-gray-500 mt-1">Odpowiedź w ciągu 24h</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
-                  <div className="bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="bg-green-600 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
                     <SafeIcon icon={FiMapPin} className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -263,6 +293,24 @@ const ContactSection = () => {
                     <p className="text-gray-600">Warszawa, Bemowo</p>
                     <p className="text-sm text-gray-500 mt-1">Oglądanie na miejscu</p>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Savings Calculator */}
+            <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-6 border border-yellow-200">
+              <h4 className="font-semibold text-gray-900 mb-4 flex items-center">
+                <SafeIcon icon={FiDollarSign} className="w-5 h-5 mr-2 text-yellow-600" />
+                Oszczędności bez agencji:
+              </h4>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-yellow-600 mb-1">3%</div>
+                  <div className="text-sm text-gray-600">Prowizja agencji</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600 mb-1">26 100 zł</div>
+                  <div className="text-sm text-gray-600">Twoje oszczędności</div>
                 </div>
               </div>
             </div>
@@ -479,11 +527,11 @@ const ContactSection = () => {
                   </h4>
                   <div className="text-sm text-blue-700">
                     <span className="font-medium">
-                      {selectedDateObj?.date.toLocaleDateString('pl-PL', { 
-                        weekday: 'long', 
-                        year: 'numeric', 
-                        month: 'long', 
-                        day: 'numeric' 
+                      {selectedDateObj?.date.toLocaleDateString('pl-PL', {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
                       })}
                     </span>
                     <span className="mx-2">•</span>

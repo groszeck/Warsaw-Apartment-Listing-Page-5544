@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const { FiX, FiPhone, FiMail, FiUser, FiMessageSquare, FiSend, FiCalendar, FiClock } = FiIcons;
+const { FiX, FiPhone, FiMail, FiUser, FiMessageSquare, FiSend, FiCalendar, FiClock, FiCheck } = FiIcons;
 
 const Contact = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
@@ -30,16 +30,17 @@ const Contact = ({ isOpen, onClose }) => {
       if (date.getDay() !== 0) {
         dates.push({
           date: date.toISOString().split('T')[0],
-          display: date.toLocaleDateString('pl-PL', { 
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
+          display: date.toLocaleDateString('pl-PL', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
           }),
           dayOfWeek: date.getDay()
         });
       }
     }
+    
     return dates;
   };
 
@@ -53,6 +54,7 @@ const Contact = ({ isOpen, onClose }) => {
         slots.push(`${hour}:00`);
         slots.push(`${hour}:30`);
       }
+      
       // Afternoon slots
       for (let hour = 14; hour <= 17; hour++) {
         slots.push(`${hour}:00`);
@@ -163,36 +165,48 @@ const Contact = ({ isOpen, onClose }) => {
               </div>
             </div>
 
-            {/* Agent Info */}
+            {/* Direct Offer Banner */}
+            <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 border-b border-green-600">
+              <div className="flex items-center justify-center space-x-3">
+                <SafeIcon icon={FiCheck} className="w-6 h-6" />
+                <div className="text-center">
+                  <h3 className="text-lg font-bold">✨ OFERTA BEZPOŚREDNIA OD WŁAŚCICIELA ✨</h3>
+                  <p className="text-sm opacity-90 mt-1">Bez agencji • Bez prowizji • Oszczędź nawet 20 000 zł</p>
+                </div>
+                <SafeIcon icon={FiCheck} className="w-6 h-6" />
+              </div>
+            </div>
+
+            {/* Owner Info */}
             <div className="p-8 bg-gray-50 border-b border-gray-200">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                Dane kontaktowe agenta
+                Dane kontaktowe właściciela
               </h3>
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="flex items-center space-x-3">
-                  <div className="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
-                    <SafeIcon icon={FiUser} className="w-5 h-5 text-blue-600" />
+                  <div className="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center">
+                    <SafeIcon icon={FiUser} className="w-5 h-5 text-green-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">Barbara Lorek</p>
-                    <p className="text-sm text-gray-600">Agent nieruchomości</p>
+                    <p className="font-medium text-gray-900">Zbyszek Grochowski</p>
+                    <p className="text-sm text-green-600 font-medium">Właściciel mieszkania</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
-                    <SafeIcon icon={FiPhone} className="w-5 h-5 text-blue-600" />
+                  <div className="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center">
+                    <SafeIcon icon={FiPhone} className="w-5 h-5 text-green-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">602 XXX XXX</p>
+                    <p className="font-medium text-gray-900">538 530 676</p>
                     <p className="text-sm text-gray-600">Telefon</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
-                    <SafeIcon icon={FiMail} className="w-5 h-5 text-blue-600" />
+                  <div className="bg-green-100 w-10 h-10 rounded-full flex items-center justify-center">
+                    <SafeIcon icon={FiMail} className="w-5 h-5 text-green-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">bl@example.com</p>
+                    <p className="font-medium text-gray-900">kontakt@zabrowska1c.pl</p>
                     <p className="text-sm text-gray-600">Email</p>
                   </div>
                 </div>

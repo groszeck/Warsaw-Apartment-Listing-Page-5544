@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const { FiMapPin, FiNavigation, FiShoppingCart, FiTrain, FiTree } = FiIcons;
+const { FiMapPin, FiNavigation, FiShoppingCart, FiTrain, FiTree, FiExternalLink } = FiIcons;
 
 const Location = () => {
   const locationFeatures = [
@@ -85,7 +85,7 @@ const Location = () => {
             ))}
           </motion.div>
 
-          {/* Map Placeholder */}
+          {/* Map Section */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -94,24 +94,85 @@ const Location = () => {
             className="relative"
           >
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-              <div className="flex items-center space-x-2 mb-6">
-                <SafeIcon icon={FiMapPin} className="w-5 h-5 text-blue-600" />
-                <span className="text-gray-900 font-semibold">
-                  ul. Zaborowska, Bemowo
-                </span>
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center space-x-2">
+                  <SafeIcon icon={FiMapPin} className="w-5 h-5 text-blue-600" />
+                  <span className="text-gray-900 font-semibold">
+                    ul. Zaborowska 1C, Bemowo
+                  </span>
+                </div>
+                <a
+                  href="https://www.google.com/maps/place/Zaborowska+1C,+01-462+Warszawa/@52.2430108,20.9218862,468m/data=!3m2!1e3!4b1!4m6!3m5!1s0x471ecb04c9b00169:0x5c508adfb7f5a2bf!8m2!3d52.2430108!4d20.9244665!16s%2Fg%2F11c18j0x16?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-1 text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors"
+                >
+                  <span>Zobacz na mapie</span>
+                  <SafeIcon icon={FiExternalLink} className="w-4 h-4" />
+                </a>
               </div>
 
-              {/* Map placeholder */}
-              <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-blue-300 opacity-20"></div>
-                <div className="text-center z-10">
-                  <SafeIcon icon={FiMapPin} className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                  <p className="text-gray-600 font-medium">
-                    Doskonała lokalizacja w Bemowie
-                  </p>
-                  <p className="text-sm text-gray-500 mt-2">
-                    Blisko metra, parków i centrum handlowego
-                  </p>
+              {/* Interactive Map */}
+              <div className="relative rounded-xl overflow-hidden shadow-inner bg-gray-100">
+                <iframe
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=20.86%2C52.18%2C20.99%2C52.31&layer=mapnik&marker=52.2430108%2C20.9244665"
+                  width="100%"
+                  height="400"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Mapa lokalizacji mieszkania na ul. Zaborowskiej 1C"
+                  className="w-full h-96 rounded-xl"
+                ></iframe>
+
+                {/* Map overlay with location info */}
+                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <SafeIcon icon={FiMapPin} className="w-4 h-4 text-blue-600" />
+                    <span className="font-semibold text-gray-900 text-sm">
+                      ul. Zaborowska 1C, 01-462 Warszawa
+                    </span>
+                  </div>
+                  <div className="text-xs text-gray-600">
+                    Bemowo • Metro Ulrychów 450m • Wola Park 5 min
+                  </div>
+                </div>
+              </div>
+
+              {/* Alternative Map View */}
+              <div className="mt-4 p-4 bg-blue-50 rounded-xl border border-blue-200">
+                <div className="flex items-center justify-between">
+                  <div className="text-sm">
+                    <div className="font-semibold text-blue-800 mb-1">Alternatywny widok mapy:</div>
+                    <div className="text-blue-700">Google Maps • Apple Maps • Mapy.cz</div>
+                  </div>
+                  <div className="flex space-x-2">
+                    <a
+                      href="https://www.google.com/maps/place/Zaborowska+1C,+01-462+Warszawa/@52.2430108,20.9218862,468m/data=!3m2!1e3!4b1!4m6!3m5!1s0x471ecb04c9b00169:0x5c508adfb7f5a2bf!8m2!3d52.2430108!4d20.9244665!16s%2Fg%2F11c18j0x16?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 bg-blue-600 text-white text-xs rounded-lg hover:bg-blue-700 transition-colors"
+                    >
+                      Google Maps
+                    </a>
+                    <a
+                      href="https://maps.apple.com/?q=52.2430108,20.9244665"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 bg-blue-600 text-white text-xs rounded-lg hover:bg-blue-700 transition-colors"
+                    >
+                      Apple Maps
+                    </a>
+                    <a
+                      href="https://mapy.cz/zakladni?x=20.9244665&y=52.2430108&z=15"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 bg-blue-600 text-white text-xs rounded-lg hover:bg-blue-700 transition-colors"
+                    >
+                      Mapy.cz
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -126,9 +187,55 @@ const Location = () => {
                   <div className="text-xs text-gray-600">do centrum</div>
                 </div>
               </div>
+
+              {/* Additional location info */}
+              <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-200">
+                <h4 className="font-semibold text-blue-800 mb-2">
+                  Współrzędne GPS
+                </h4>
+                <div className="text-sm text-blue-700 space-y-1">
+                  <div>Szerokość: 52.2430108°N</div>
+                  <div>Długość: 20.9244665°E</div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
+
+        {/* Neighborhood highlights */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-16 bg-white rounded-3xl p-8 shadow-lg border border-gray-200"
+        >
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+            Atrakcje w okolicy
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center p-4 bg-gray-50 rounded-2xl">
+              <SafeIcon icon={FiTrain} className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+              <div className="font-semibold text-gray-900 mb-1">Metro Ulrychów</div>
+              <div className="text-sm text-gray-600">Linia M2, bezpośrednie połączenie z centrum</div>
+            </div>
+            <div className="text-center p-4 bg-gray-50 rounded-2xl">
+              <SafeIcon icon={FiShoppingCart} className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+              <div className="font-semibold text-gray-900 mb-1">Wola Park</div>
+              <div className="text-sm text-gray-600">Centrum handlowe z ponad 200 sklepami</div>
+            </div>
+            <div className="text-center p-4 bg-gray-50 rounded-2xl">
+              <SafeIcon icon={FiTree} className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+              <div className="font-semibold text-gray-900 mb-1">Parki miejskie</div>
+              <div className="text-sm text-gray-600">Zieleń, rekreacja i spacery</div>
+            </div>
+            <div className="text-center p-4 bg-gray-50 rounded-2xl">
+              <SafeIcon icon={FiNavigation} className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+              <div className="font-semibold text-gray-900 mb-1">Centrum</div>
+              <div className="text-sm text-gray-600">15 min metrem do Śródmieścia</div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

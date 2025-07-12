@@ -7,7 +7,27 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        sans: [
+          '-apple-system', 
+          'BlinkMacSystemFont', 
+          'Segoe UI', 
+          'Roboto', 
+          'Helvetica Neue',
+          'Arial',
+          'Noto Color Emoji',
+          'Apple Color Emoji', 
+          'Segoe UI Emoji',
+          'sans-serif'
+        ],
+        emoji: [
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Noto Color Emoji',
+          'Segoe UI Symbol',
+          'Android Emoji',
+          'EmojiSymbols',
+          'sans-serif'
+        ],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

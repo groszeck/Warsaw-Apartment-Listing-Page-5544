@@ -1,41 +1,44 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
 const { FiHome, FiWifi, FiThermometer, FiShield, FiZap, FiDroplet } = FiIcons;
 
 const Features = () => {
+  const { t } = useLanguage();
+
   const features = [
     {
       icon: FiHome,
-      title: "Wysoki standard",
-      description: "Nowoczesne wykończenie i zabudowa na wymiar"
+      title: t('highStandard'),
+      description: t('standardDescription')
     },
     {
       icon: FiZap,
-      title: "Pełne wyposażenie",
-      description: "Płyta indukcyjna, zmywarka, lodówka, mikrofalówka"
+      title: t('fullEquipment'),
+      description: t('equipmentDescription')
     },
     {
       icon: FiThermometer,
-      title: "Ogrzewanie miejskie",
-      description: "Wliczone w czynsz administracyjny"
+      title: t('heating'),
+      description: t('heatingDescription')
     },
     {
       icon: FiDroplet,
-      title: "2 łazienki",
-      description: "Łazienka z prysznicem i łazienka z wanną"
+      title: t('bathrooms'),
+      description: t('bathroomsDescription')
     },
     {
       icon: FiShield,
-      title: "Monitoring i ochrona",
-      description: "Bezpieczeństwo 24/7"
+      title: t('security'),
+      description: t('securityDescription')
     },
     {
       icon: FiWifi,
-      title: "Winda",
-      description: "Wygodny dostęp do mieszkania"
+      title: t('elevator'),
+      description: t('elevatorDescription')
     }
   ];
 
@@ -71,10 +74,10 @@ const Features = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Dlaczego warto wybrać to mieszkanie?
+            {t('whyChoose')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Nowoczesne rozwiązania i wysoki standard wykończenia w doskonałej lokalizacji
+            {t('featuresDescription')}
           </p>
         </motion.div>
 
@@ -113,24 +116,24 @@ const Features = () => {
           className="mt-16 bg-white rounded-3xl p-8 shadow-lg border border-gray-200"
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-            Szczegóły mieszkania
+            {t('apartmentDetails')}
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center p-4 bg-gray-50 rounded-2xl">
               <div className="text-2xl font-bold text-blue-600 mb-2">56,18 m²</div>
-              <div className="text-gray-600">Powierzchnia całkowita</div>
+              <div className="text-gray-600">{t('totalArea')}</div>
             </div>
             <div className="text-center p-4 bg-gray-50 rounded-2xl">
               <div className="text-2xl font-bold text-blue-600 mb-2">2,82 m²</div>
-              <div className="text-gray-600">Powierzchnia piwnicy</div>
+              <div className="text-gray-600">{t('basementArea')}</div>
             </div>
             <div className="text-center p-4 bg-gray-50 rounded-2xl">
               <div className="text-2xl font-bold text-blue-600 mb-2">6</div>
-              <div className="text-gray-600">Pięter w budynku</div>
+              <div className="text-gray-600">{t('floors')}</div>
             </div>
             <div className="text-center p-4 bg-gray-50 rounded-2xl">
               <div className="text-2xl font-bold text-blue-600 mb-2">Cegła</div>
-              <div className="text-gray-600">Materiał budynku</div>
+              <div className="text-gray-600">{t('buildingMaterial')}</div>
             </div>
           </div>
         </motion.div>

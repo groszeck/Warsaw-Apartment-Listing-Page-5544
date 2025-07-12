@@ -6,9 +6,11 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<ApartmentLanding />} />
-      </Routes>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<ApartmentLanding />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

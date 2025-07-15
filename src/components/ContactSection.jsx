@@ -279,7 +279,7 @@ const ContactSection = () => {
                     <SafeIcon icon={FiMail} className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">kontakt@zabrowska1c.pl</h4>
+                    <h4 className="font-semibold text-gray-900">z.m.grochowski@gmail.com</h4>
                     <p className="text-gray-600">Email</p>
                     <p className="text-sm text-gray-500 mt-1">Odpowiedź w ciągu 24h</p>
                   </div>

@@ -13,8 +13,8 @@ const Gallery = () => {
   const images = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      alt: "Living room with kitchen",
+      src: "https://github.com/groszeck/Warsaw-Apartment-Listing-Page-5544/blob/main/src/assets/images/1.jpg?raw=true",
+      alt: "Salon z kuchnią",
       title: t('livingRoom')
     },
     {

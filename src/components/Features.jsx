@@ -21,9 +21,9 @@ const Features = () => {
       description: t('equipmentDescription')
     },
     {
-      icon: FiThermometer,
-      title: t('heating'),
-      description: t('heatingDescription')
+      icon: FiIcons.FiLock,
+      title: t('parking'),
+      description: t('parkingDescription'),
     },
     {
       icon: FiDroplet,

@@ -119,7 +119,7 @@ const translations = {
     
     // Location Section
     excellentLocation: "Doskonała lokalizacja",
-    locationDescription: "Warszawa, Bemowo - spokojny район z doskonałym połączeniem komunikacyjnym",
+    locationDescription: "Warszawa, Bemowo - spokojna okolica z doskonałym połączeniem komunikacyjnym",
     metro: "Metro Ulrychów",
     metroDistance: "450 m od mieszkania",
     walkTime: "2 min pieszo",
@@ -215,7 +215,11 @@ const translations = {
     aboutMeTitle: "O mnie",
     aboutMeText1: "Cześć! Nazywam się Zbyszek i jestem prywatnym właścicielem tego mieszkania. Sam mieszkałem tu przez kilka lat i włożyłem w to miejsce dużo serca oraz energii. To wyjątkowe mieszkanie, które urządziłem z myślą o wygodzie i codziennym komforcie.",
     aboutMeText2: "Sprzedaję je, ponieważ niedawno wziąłem ślub i czas iść dalej przez życie za miłością. Mam nadzieję, że nowy właściciel będzie cieszył się tym miejscem przez długie lata, tak jak ja.",
-    scheduleMeetingBtn: "Umówmy się w mieszkaniu"
+    scheduleMeetingBtn: "Umówmy się w mieszkaniu",
+    mapTitle: "Mapa lokalizacji mieszkania na ul. Zaborowskiej 1C",
+    locationOverlay: "Bemowo • Metro Ulrychów 450m • Wola Park 5 min",
+    parking: "Parking",
+    parkingDescription: "zamykany bezpieczny parking dla mieszkańców"
   },
   
   en: {
@@ -375,7 +379,11 @@ const translations = {
     aboutMeTitle: "About me",
     aboutMeText1: "Hi! My name is Zbyszek and I am the private owner of this apartment. I lived here myself for several years and put a lot of heart and energy into this place. It is a unique apartment, arranged for comfort and everyday convenience.",
     aboutMeText2: "I am selling it because I recently got married and it's time to move on in life for love. I hope the new owner will enjoy this place for many years, just as I did.",
-    scheduleMeetingBtn: "Let's meet at the apartment"
+    scheduleMeetingBtn: "Let's meet at the apartment",
+    mapTitle: "Apartment location map at Zaborowska 1C",
+    locationOverlay: "Bemowo • Ulrychów Metro 450m • Wola Park 5 min",
+    parking: "Parking",
+    parkingDescription: "secure gated parking for residents"
   },
   
   de: {
@@ -535,7 +543,11 @@ const translations = {
     aboutMeTitle: "Über mich",
     aboutMeText1: "Hallo! Mein Name ist Zbyszek und ich bin der private Eigentümer dieser Wohnung. Ich habe hier selbst mehrere Jahre gewohnt und viel Herz und Energie in diesen Ort gesteckt. Es ist eine besondere Wohnung, die ich für Komfort und Alltag eingerichtet habe.",
     aboutMeText2: "Ich verkaufe sie, weil ich kürzlich geheiratet habe und es Zeit ist, dem Leben aus Liebe zu folgen. Ich hoffe, der neue Besitzer wird diesen Ort viele Jahre lang genießen, so wie ich es getan habe.",
-    scheduleMeetingBtn: "Lassen Sie uns in der Wohnung treffen"
+    scheduleMeetingBtn: "Lassen Sie uns in der Wohnung treffen",
+    mapTitle: "Wohnungslagekarte in der Zaborowska 1C",
+    locationOverlay: "Bemowo • Metro Ulrychów 450m • Wola Park 5 Min",
+    parking: "Parkplatz",
+    parkingDescription: "abschließbarer, sicherer Parkplatz für Bewohner"
   },
   
   ua: {
@@ -695,7 +707,11 @@ const translations = {
     aboutMeTitle: "Про мене",
     aboutMeText1: "Привіт! Мене звати Збишек, я приватний власник цієї квартири. Я сам жив тут кілька років і вклав у це місце багато серця та енергії. Це унікальна квартира, яку я облаштував для комфорту та зручності.",
     aboutMeText2: "Я продаю її, бо нещодавно одружився і настав час йти далі за коханням. Сподіваюся, новий власник буде насолоджуватися цим місцем багато років, як і я.",
-    scheduleMeetingBtn: "Домовимось про зустріч у квартирі"
+    scheduleMeetingBtn: "Домовимось про зустріч у квартирі",
+    mapTitle: "Карта розташування квартири на вул. Заборовська 1C",
+    locationOverlay: "Бемово • Метро Ульрихув 450м • Wola Park 5 хв",
+    parking: "Паркінг",
+    parkingDescription: "закритий безпечний паркінг для мешканців"
   },
   
   ru: {
@@ -855,6 +871,10 @@ const translations = {
     aboutMeTitle: "Обо мне",
     aboutMeText1: "Привет! Меня зовут Збышек, я частный владелец этой квартиры. Я сам жил здесь несколько лет и вложил в это место много сердца и энергии. Это уникальная квартира, которую я обустроил для комфорта и уюта.",
     aboutMeText2: "Я продаю её, потому что недавно женился и пришло время идти дальше по жизни ради любви. Надеюсь, новый владелец будет наслаждаться этим местом долгие годы, как и я.",
-    scheduleMeetingBtn: "Давайте встретимся в квартире"
+    scheduleMeetingBtn: "Давайте встретимся в квартире",
+    mapTitle: "Карта расположения квартиры на ул. Заборовская 1C",
+    locationOverlay: "Бемово • Метро Ульрыхув 450м • Wola Park 5 мин",
+    parking: "Парковка",
+    parkingDescription: "закрытая безопасная парковка для жителей"
   }
 };

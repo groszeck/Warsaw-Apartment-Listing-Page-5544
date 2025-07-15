@@ -12,6 +12,8 @@ import Contact from '../components/Contact';
 import FloatingCTA from '../components/FloatingCTA';
 import AboutMeSection from '../components/AboutMeSection';
 import { useLanguage } from "../contexts/LanguageContext";
+import * as FiIcons from 'react-icons/fi';
+import SafeIcon from '../components/../common/SafeIcon';
 
 const ApartmentLanding = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -21,9 +23,12 @@ const ApartmentLanding = () => {
     <LanguageProvider>
       <div className="fixed top-0 left-0 w-full z-50 bg-white/90 shadow-md flex flex-col sm:flex-row items-center justify-between px-4 py-2 gap-2">
         <div className="flex items-center gap-2">
-          <span className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full font-semibold text-sm shadow">
-            <span className="mr-2">{t('directOffer')}</span>
+          <span className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full font-semibold text-sm shadow flex items-center space-x-2">
+            <SafeIcon icon={FiIcons.FiCheck} className="w-4 h-4" />
+            <span>{t('directOffer')}</span>
+            <SafeIcon icon={FiIcons.FiDollarSign} className="w-4 h-4" />
             <span>{t('noCommission')}</span>
+            <SafeIcon icon={FiIcons.FiCheck} className="w-4 h-4" />
           </span>
         </div>
         <div className="">

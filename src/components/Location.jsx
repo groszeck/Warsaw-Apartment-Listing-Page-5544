@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
+import { MdTrain } from 'react-icons/md';
 import SafeIcon from '../common/SafeIcon';
 import { useLanguage } from '../contexts/LanguageContext';
+import { FaTree } from 'react-icons/fa';
 
 const { FiMapPin, FiNavigation, FiShoppingCart, FiTrain, FiTree, FiExternalLink } = FiIcons;
 
@@ -10,7 +12,7 @@ const Location = () => {
   const { t } = useLanguage();
   const locationFeatures = [
     {
-      icon: FiTrain,
+      icon: MdTrain, // pociąg dla Metro Ulrychów (poprawna ikona)
       title: t('metro'),
       description: t('metroDistance'),
       distance: t('walkTime')
@@ -22,7 +24,7 @@ const Location = () => {
       distance: t('mallTime')
     },
     {
-      icon: FiTree,
+      icon: FaTree, // drzewo dla parków (poprawna ikona)
       title: t('parks'),
       description: t('parksDescription'),
       distance: t('nearby')

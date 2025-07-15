@@ -144,7 +144,11 @@ const translations = {
     longitude: "Długość: 20.9244665°E",
     
     // Contact Section
-    contactUs: "Skontaktuj się z nami",
+    onlyApartmentPrice: "Tylko cena mieszkania, bez prowizji",
+    directContact: "Bezpośredni kontakt z właścicielem",
+    addressCity: "Warszawa, Bemowo",
+    addressShort: "ul. Zaborowska 1C",
+    contactTitle: "Skontaktuj się z nami",
     contactDescription: "Umów oglądanie mieszkania lub zadaj pytanie. Jesteśmy do Twojej dyspozycji.",
     directOfferBanner: "✨ OFERTA BEZPOŚREDNIA OD WŁAŚCICIELA ✨",
     directOfferDescription: "Kupuj bez pośredników i oszczędź nawet 20 000 zł na prowizji!",
@@ -308,8 +312,12 @@ const translations = {
     longitude: "Longitude: 20.9244665°E",
     
     // Contact Section
-    contactUs: "Contact us",
-    contactDescription: "Schedule apartment viewing or ask a question. We are at your disposal.",
+    onlyApartmentPrice: "Only apartment price, no commission",
+    directContact: "Direct contact with the owner",
+    addressCity: "Warsaw, Bemowo",
+    addressShort: "ul. Zaborowska 1C",
+    contactTitle: "Contact us",
+    contactDescription: "Schedule a viewing or ask a question. We are at your disposal.",
     directOfferBanner: "✨ DIRECT OFFER FROM OWNER ✨",
     directOfferDescription: "Buy without intermediaries and save up to 20,000 PLN on commission!",
     ownerContactDetails: "Owner contact details",
@@ -472,8 +480,12 @@ const translations = {
     longitude: "Längengrad: 20.9244665°E",
     
     // Contact Section
-    contactUs: "Kontaktieren Sie uns",
-    contactDescription: "Terminieren Sie eine Wohnungsbesichtigung oder stellen Sie eine Frage. Wir stehen Ihnen zur Verfügung.",
+    onlyApartmentPrice: "Nur Wohnungspreis, keine Provision",
+    directContact: "Direkter Kontakt mit dem Eigentümer",
+    addressCity: "Warschau, Bemowo",
+    addressShort: "ul. Zaborowska 1C",
+    contactTitle: "Kontaktieren Sie uns",
+    contactDescription: "Vereinbaren Sie eine Besichtigung oder stellen Sie eine Frage. Wir stehen Ihnen zur Verfügung.",
     directOfferBanner: "✨ DIREKTANGEBOT VOM EIGENTÜMER ✨",
     directOfferDescription: "Kaufen Sie ohne Vermittler und sparen Sie bis zu 20.000 PLN Provision!",
     ownerContactDetails: "Kontaktdaten des Eigentümers",
@@ -636,7 +648,11 @@ const translations = {
     longitude: "Довгота: 20.9244665°E",
     
     // Contact Section
-    contactUs: "Зв'яжіться з нами",
+    onlyApartmentPrice: "Тільки ціна квартири, без комісії",
+    directContact: "Прямий контакт з власником",
+    addressCity: "Варшава, Бемово",
+    addressShort: "вул. Заборовська 1C",
+    contactTitle: "Зв'яжіться з нами",
     contactDescription: "Запланувати огляд квартири або поставити запитання. Ми до ваших послуг.",
     directOfferBanner: "✨ ПРЯМА ПРОПОЗИЦІЯ ВІД ВЛАСНИКА ✨",
     directOfferDescription: "Купуйте без посередників і заощаджуйте до 20 000 злотих на комісії!",
@@ -800,8 +816,12 @@ const translations = {
     longitude: "Долгота: 20.9244665°E",
     
     // Contact Section
-    contactUs: "Свяжитесь с нами",
-    contactDescription: "Запланировать осмотр квартиры или задать вопрос. Мы к вашим услугам.",
+    onlyApartmentPrice: "Только цена квартиры, без комиссии",
+    directContact: "Прямой контакт с владельцем",
+    addressCity: "Варшава, Бемово",
+    addressShort: "ул. Заборовска 1C",
+    contactTitle: "Свяжитесь с нами",
+    contactDescription: "Запишитесь на просмотр квартиры или задайте вопрос. Мы к вашим услугам.",
     directOfferBanner: "✨ ПРЯМОЕ ПРЕДЛОЖЕНИЕ ОТ ВЛАДЕЛЬЦА ✨",
     directOfferDescription: "Покупайте без посредников и экономьте до 20 000 злотых на комиссии!",
     ownerContactDetails: "Контактные данные владельца",

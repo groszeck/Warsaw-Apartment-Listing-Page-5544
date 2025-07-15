@@ -1,13 +1,16 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
+import { useState } from 'react';
+import { FiPlay } from 'react-icons/fi';
 
 const { FiMapPin, FiHome, FiTrendingUp, FiPhone, FiCheck, FiDollarSign, FiUser } = FiIcons;
 
 const Hero = ({ onContactClick }) => {
   const { t } = useLanguage();
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
@@ -20,24 +23,6 @@ const Hero = ({ onContactClick }) => {
           }}
         ></div>
       </div>
-
-      {/* Direct Owner Banner */}
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20"
-      >
-        <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-full shadow-lg">
-          <div className="flex items-center space-x-2 text-sm font-semibold">
-            <SafeIcon icon={FiCheck} className="w-4 h-4" />
-            <span>{t('directOffer')}</span>
-            <SafeIcon icon={FiDollarSign} className="w-4 h-4" />
-            <span>{t('noCommission')}</span>
-            <SafeIcon icon={FiCheck} className="w-4 h-4" />
-          </div>
-        </div>
-      </motion.div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
@@ -131,7 +116,6 @@ const Hero = ({ onContactClick }) => {
 
               <div className="grid grid-cols-3 gap-4">
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 text-center border border-gray-200 shadow-sm">
-                  <SafeIcon icon={FiHome} className="w-6 h-6 text-blue-600 mx-auto mb-2" />
                   <div className="text-2xl font-bold text-gray-900">2</div>
                   <div className="text-xs text-gray-500">{t('rooms')}</div>
                 </div>
@@ -180,6 +164,17 @@ const Hero = ({ onContactClick }) => {
                 className="w-full h-[600px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+              {/* Play button */}
+              <button
+                onClick={() => setIsVideoOpen(true)}
+                className="absolute inset-0 flex items-center justify-center group"
+                style={{ background: 'rgba(0,0,0,0.15)' }}
+                aria-label="Odtwórz film"
+              >
+                <span className="bg-white/80 rounded-full p-6 shadow-lg group-hover:bg-white transition-colors">
+                  <FiPlay className="w-16 h-16 text-blue-600 group-hover:scale-110 transition-transform" />
+                </span>
+              </button>
             </div>
 
             {/* Floating Info Card */}
@@ -196,6 +191,59 @@ const Hero = ({ onContactClick }) => {
           </motion.div>
         </div>
       </div>
+
+      {/* Modal z YouTube */}
+      <AnimatePresence>
+        {isVideoOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.4, type: 'spring', bounce: 0.25 }}
+              className="relative bg-white rounded-3xl shadow-2xl w-full max-w-[420px] h-full flex flex-col justify-center items-center overflow-hidden p-0"
+            >
+              <button
+                onClick={() => setIsVideoOpen(false)}
+                className="absolute top-4 right-4 bg-gray-100 hover:bg-gray-200 rounded-full p-2 z-10"
+                aria-label="Zamknij"
+              >
+                <FiIcons.FiX className="w-6 h-6 text-gray-600" />
+              </button>
+              <div className="w-full h-screen flex items-center justify-center bg-black">
+                <iframe
+                  width="315"
+                  height="560"
+                  src="https://www.youtube.com/embed/FQvpKJ7ShOE?autoplay=1"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  className="w-full h-full max-h-screen object-contain rounded-t-3xl"
+                  style={{ aspectRatio: '9/16', maxWidth: '100vw', maxHeight: '100vh' }}
+                ></iframe>
+              </div>
+              <div className="flex flex-col items-center justify-center py-6">
+                <button
+                  onClick={() => {
+                    setIsVideoOpen(false);
+                    onContactClick();
+                  }}
+                  className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold flex items-center space-x-2 shadow-lg text-lg"
+                >
+                  <FiIcons.FiPhone className="w-6 h-6 mr-2" />
+                  <span>{t('contact')}</span>
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

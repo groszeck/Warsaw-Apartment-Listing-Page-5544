@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const { FiPhone, FiMail, FiMapPin, FiClock, FiUser, FiSend, FiCalendar, FiCheck, FiDollarSign } = FiIcons;
 
 const ContactSection = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -198,10 +200,10 @@ const ContactSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Skontaktuj się z nami
+            {t('contactTitle')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Umów oglądanie mieszkania lub zadaj pytanie. Jesteśmy do Twojej dyspozycji.
+            {t('contactDescription')}
           </p>
         </motion.div>
 
@@ -215,26 +217,26 @@ const ContactSection = () => {
         >
           <div className="text-center">
             <h3 className="text-3xl font-bold mb-4">
-              ✨ OFERTA BEZPOŚREDNIA OD WŁAŚCICIELA ✨
+              {t('directOfferBanner')}
             </h3>
             <p className="text-xl mb-6">
-              Kupuj bez pośredników i oszczędź nawet 20 000 zł na prowizji!
+              {t('directOfferDescription')}
             </p>
             <div className="grid md:grid-cols-3 gap-4 text-center">
               <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
                 <SafeIcon icon={FiCheck} className="w-8 h-8 mx-auto mb-2" />
-                <h4 className="font-semibold">Bez agencji</h4>
-                <p className="text-sm opacity-90">Bezpośredni kontakt</p>
+                <h4 className="font-semibold">{t('noAgency')}</h4>
+                <p className="text-sm opacity-90">{t('directContact')}</p>
               </div>
               <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
                 <SafeIcon icon={FiDollarSign} className="w-8 h-8 mx-auto mb-2" />
-                <h4 className="font-semibold">Bez prowizji</h4>
-                <p className="text-sm opacity-90">Płacisz tylko cenę mieszkania</p>
+                <h4 className="font-semibold">{t('noCommission')}</h4>
+                <p className="text-sm opacity-90">{t('onlyApartmentPrice')}</p>
               </div>
               <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
                 <SafeIcon icon={FiUser} className="w-8 h-8 mx-auto mb-2" />
-                <h4 className="font-semibold">Właściciel</h4>
-                <p className="text-sm opacity-90">Zbyszek Grochowski</p>
+                <h4 className="font-semibold">{t('owner')}</h4>
+                <p className="text-sm opacity-90">{t('ownerName')}</p>
               </div>
             </div>
           </div>
@@ -251,7 +253,7 @@ const ContactSection = () => {
           >
             <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8 border border-green-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Dane kontaktowe właściciela
+                {t('ownerContactDetails')}
               </h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -259,9 +261,9 @@ const ContactSection = () => {
                     <SafeIcon icon={FiUser} className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Zbyszek Grochowski</h4>
-                    <p className="text-green-600 font-medium">Właściciel mieszkania</p>
-                    <p className="text-sm text-gray-500 mt-1">Sprzedaż bezpośrednia</p>
+                    <h4 className="font-semibold text-gray-900">{t('ownerName')}</h4>
+                    <p className="text-green-600 font-medium">{t('ownerTitle')}</p>
+                    <p className="text-sm text-gray-500 mt-1">{t('directSaleTitle')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -269,9 +271,9 @@ const ContactSection = () => {
                     <SafeIcon icon={FiPhone} className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">538 530 676</h4>
-                    <p className="text-gray-600">Telefon</p>
-                    <p className="text-sm text-gray-500 mt-1">Dostępny: Pn-Pt 9:00-18:00</p>
+                    <h4 className="font-semibold text-gray-900">{t('phone')}</h4>
+                    <p className="text-gray-600">{t('phone')}</p>
+                    <p className="text-sm text-gray-500 mt-1">{t('phoneAvailable')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -280,8 +282,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">z.m.grochowski@gmail.com</h4>
-                    <p className="text-gray-600">Email</p>
-                    <p className="text-sm text-gray-500 mt-1">Odpowiedź w ciągu 24h</p>
+                    <p className="text-gray-600">{t('email')}</p>
+                    <p className="text-sm text-gray-500 mt-1">{t('emailResponse')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -289,9 +291,9 @@ const ContactSection = () => {
                     <SafeIcon icon={FiMapPin} className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">ul. Zaborowska</h4>
-                    <p className="text-gray-600">Warszawa, Bemowo</p>
-                    <p className="text-sm text-gray-500 mt-1">Oglądanie na miejscu</p>
+                    <h4 className="font-semibold text-gray-900">{t('addressShort')}</h4>
+                    <p className="text-gray-600">{t('addressCity')}</p>
+                    <p className="text-sm text-gray-500 mt-1">{t('viewingOnSite')}</p>
                   </div>
                 </div>
               </div>
@@ -301,16 +303,16 @@ const ContactSection = () => {
             <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-6 border border-yellow-200">
               <h4 className="font-semibold text-gray-900 mb-4 flex items-center">
                 <SafeIcon icon={FiDollarSign} className="w-5 h-5 mr-2 text-yellow-600" />
-                Oszczędności bez agencji:
+                {t('savingsWithoutAgency')}
               </h4>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-yellow-600 mb-1">3%</div>
-                  <div className="text-sm text-gray-600">Prowizja agencji</div>
+                  <div className="text-sm text-gray-600">{t('agencyCommission')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-green-600 mb-1">26 100 zł</div>
-                  <div className="text-sm text-gray-600">Twoje oszczędności</div>
+                  <div className="text-sm text-gray-600">{t('yourSavings')}</div>
                 </div>
               </div>
             </div>

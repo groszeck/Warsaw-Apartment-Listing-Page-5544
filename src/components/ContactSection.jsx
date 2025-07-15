@@ -314,29 +314,6 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
-
-            {/* Availability Legend */}
-            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-              <h4 className="font-semibold text-gray-900 mb-4">Legenda dostępności:</h4>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-4 h-4 bg-green-400 rounded-full"></div>
-                  <span className="text-sm text-gray-700">Dostępny</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-4 h-4 bg-yellow-400 rounded-full"></div>
-                  <span className="text-sm text-gray-700">Ograniczone godziny</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-4 h-4 bg-red-400 rounded-full"></div>
-                  <span className="text-sm text-gray-700">Zajęty</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-4 h-4 bg-gray-400 rounded-full"></div>
-                  <span className="text-sm text-gray-700">Niedostępny</span>
-                </div>
-              </div>
-            </div>
           </motion.div>
 
           {/* Contact Form */}

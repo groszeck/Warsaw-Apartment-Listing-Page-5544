@@ -10,6 +10,7 @@ import Location from '../components/Location';
 import ContactSection from '../components/ContactSection';
 import Contact from '../components/Contact';
 import FloatingCTA from '../components/FloatingCTA';
+import AboutMeSection from '../components/AboutMeSection';
 
 const ApartmentLanding = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -24,8 +25,9 @@ const ApartmentLanding = () => {
 
         <Hero onContactClick={() => setIsContactOpen(true)} />
         <VideoSection />
-        <Features />
         <Gallery />
+        <AboutMeSection onContactClick={() => setIsContactOpen(true)} />
+        <Features />
         <Location />
         <ContactSection />
         <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />

@@ -125,7 +125,7 @@ const Hero = ({ onContactClick }) => {
                   <span className="text-blue-700 font-medium">{t('price')}</span>
                   <SafeIcon icon={FiTrendingUp} className="w-5 h-5 text-blue-600" />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">870 000 zł</div>
+                <div className="text-3xl font-bold text-gray-900 mb-2">887 000 zł</div>
                 <div className="text-gray-600 text-sm">15 485,94 zł/m²</div>
               </div>
 

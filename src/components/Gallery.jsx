@@ -13,40 +13,70 @@ const Gallery = () => {
   const images = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      alt: "Living room with kitchen",
-      title: t('livingRoom')
+      src: require('../assets/images/1.jpg'),
+      alt: 'Zdjęcie 1',
+      title: t('galleryImage1')
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2058&q=80",
-      alt: "Bedroom",
-      title: t('bedroom')
+      src: require('../assets/images/2.jpg'),
+      alt: 'Zdjęcie 2',
+      title: t('galleryImage2')
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      alt: "Bathroom",
-      title: t('bathroom')
+      src: require('../assets/images/3.jpg'),
+      alt: 'Zdjęcie 3',
+      title: t('galleryImage3')
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      alt: "Kitchen",
-      title: t('kitchen')
+      src: require('../assets/images/3a.jpg'),
+      alt: 'Zdjęcie 4',
+      title: t('galleryImage4')
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80",
-      alt: "Balcony",
-      title: t('balcony')
+      src: require('../assets/images/4.jpg'),
+      alt: 'Zdjęcie 5',
+      title: t('galleryImage5')
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      alt: "Hallway",
-      title: t('hallway')
-    }
+      src: require('../assets/images/5.jpg'),
+      alt: 'Zdjęcie 6',
+      title: t('galleryImage6')
+    },
+    {
+      id: 7,
+      src: require('../assets/images/6.jpg'),
+      alt: 'Zdjęcie 7',
+      title: t('galleryImage7')
+    },
+    {
+      id: 8,
+      src: require('../assets/images/7.jpg'),
+      alt: 'Zdjęcie 8',
+      title: t('galleryImage8')
+    },
+    {
+      id: 9,
+      src: require('../assets/images/8.jpg'),
+      alt: 'Zdjęcie 9',
+      title: t('galleryImage9')
+    },
+    {
+      id: 10,
+      src: require('../assets/images/9.jpg'),
+      alt: 'Zdjęcie 10',
+      title: t('galleryImage10')
+    },
+    {
+      id: 11,
+      src: require('../assets/images/9b.jpg'),
+      alt: 'Zdjęcie 11',
+      title: t('galleryImage11')
+    },
   ];
 
   const nextImage = () => {

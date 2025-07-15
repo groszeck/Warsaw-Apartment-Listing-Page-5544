@@ -8,9 +8,8 @@ import { FiPlay } from 'react-icons/fi';
 
 const { FiMapPin, FiHome, FiTrendingUp, FiPhone, FiCheck, FiDollarSign, FiUser } = FiIcons;
 
-const Hero = ({ onContactClick }) => {
+const Hero = ({ onContactClick, isVideoOpen, setIsVideoOpen }) => {
   const { t } = useLanguage();
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
@@ -144,7 +143,14 @@ const Hero = ({ onContactClick }) => {
                 <SafeIcon icon={FiPhone} className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 <span>{t('contact')}</span>
               </button>
-              <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-sm">
+              <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-sm"
+                onClick={() => {
+                  const gallery = document.getElementById('gallery-section');
+                  if (gallery) {
+                    gallery.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 {t('seeMore')}
               </button>
             </motion.div>
@@ -207,6 +213,7 @@ const Hero = ({ onContactClick }) => {
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.4, type: 'spring', bounce: 0.25 }}
               className="relative bg-white rounded-3xl shadow-2xl w-full max-w-[420px] h-full flex flex-col justify-center items-center overflow-hidden p-0"
+              style={{ maxHeight: '100vh' }}
             >
               <button
                 onClick={() => setIsVideoOpen(false)}
@@ -215,7 +222,8 @@ const Hero = ({ onContactClick }) => {
               >
                 <FiIcons.FiX className="w-6 h-6 text-gray-600" />
               </button>
-              <div className="w-full h-screen flex items-center justify-center bg-black">
+              <div className="w-full flex items-center justify-center bg-black"
+                   style={{ height: '75vh', maxHeight: 560 }}>
                 <iframe
                   width="315"
                   height="560"
@@ -224,8 +232,8 @@ const Hero = ({ onContactClick }) => {
                   frameBorder="0"
                   allow="autoplay; encrypted-media"
                   allowFullScreen
-                  className="w-full h-full max-h-screen object-contain rounded-t-3xl"
-                  style={{ aspectRatio: '9/16', maxWidth: '100vw', maxHeight: '100vh' }}
+                  className="w-full h-full object-contain rounded-t-3xl"
+                  style={{ aspectRatio: '9/16', maxWidth: '100vw', maxHeight: '75vh' }}
                 ></iframe>
               </div>
               <div className="flex flex-col items-center justify-center py-6">

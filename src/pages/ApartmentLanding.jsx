@@ -17,6 +17,7 @@ import SafeIcon from '../components/../common/SafeIcon';
 
 const ApartmentLanding = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const { t } = useLanguage();
 
   return (
@@ -36,15 +37,21 @@ const ApartmentLanding = () => {
         </div>
       </div>
       <div className="pt-16 min-h-screen bg-white">
-        <Hero onContactClick={() => setIsContactOpen(true)} />
-        <VideoSection />
+        <Hero
+          onContactClick={() => setIsContactOpen(true)}
+          isVideoOpen={isVideoOpen}
+          setIsVideoOpen={setIsVideoOpen}
+        />
         <Gallery />
         <AboutMeSection onContactClick={() => setIsContactOpen(true)} />
         <Features />
         <Location />
         <ContactSection />
         <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-        <FloatingCTA onContactClick={() => setIsContactOpen(true)} />
+        <FloatingCTA
+          onContactClick={() => setIsContactOpen(true)}
+          onPlayClick={() => setIsVideoOpen(true)}
+        />
       </div>
     </LanguageProvider>
   );

@@ -11,11 +11,11 @@ import ContactSection from '../components/ContactSection';
 import Contact from '../components/Contact';
 import FloatingCTA from '../components/FloatingCTA';
 import AboutMeSection from '../components/AboutMeSection';
-import { useTranslation } from 'react-i18next';
+import { useLanguage } from "../contexts/LanguageContext";
 
 const ApartmentLanding = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
-  const { t } = useTranslation();
+  const { t } = useLanguage();
 
   return (
     <LanguageProvider>

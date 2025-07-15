@@ -14,39 +14,69 @@ const Gallery = () => {
     {
       id: 1,
       src: "https://github.com/groszeck/Warsaw-Apartment-Listing-Page-5544/blob/main/src/assets/images/1.jpg?raw=true",
-      alt: "Salon z kuchnią",
-      title: t('livingRoom')
+      alt: 'Zdjęcie 1',
+      title: t('galleryImage1')
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2058&q=80",
-      alt: "Bedroom",
-      title: t('bedroom')
+      src: "https://github.com/groszeck/Warsaw-Apartment-Listing-Page-5544/blob/main/src/assets/images/2.jpg?raw=true",
+      alt: 'Przestronny salon z dużą ilością naturalnego światła, wygodną sofą i jadalnią.',
+      title: 'Przestronny salon z dużą ilością naturalnego światła, wygodną sofą i jadalnią.'
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      alt: "Bathroom",
-      title: t('bathroom')
+      src: "https://github.com/groszeck/Warsaw-Apartment-Listing-Page-5544/blob/main/src/assets/images/3.jpg?raw=true",
+      alt: 'Widok na wejście i strefę dzienną – mieszkanie jasne i funkcjonalne.',
+      title: 'Widok na wejście i strefę dzienną – mieszkanie jasne i funkcjonalne.'
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      alt: "Kitchen",
-      title: t('kitchen')
+      src: "https://github.com/groszeck/Warsaw-Apartment-Listing-Page-5544/blob/main/src/assets/images/3a.jpg?raw=true",
+      alt: 'Przytulny salon z wygodnym miejscem do relaksu i stołem do pracy lub posiłków.',
+      title: 'Przytulny salon z wygodnym miejscem do relaksu i stołem do pracy lub posiłków.'
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80",
-      alt: "Balcony",
-      title: t('balcony')
+      src: "https://github.com/groszeck/Warsaw-Apartment-Listing-Page-5544/blob/main/src/assets/images/4.jpg?raw=true",
+      alt: 'Stylowa łazienka z wanną, pralką i widokiem na sypialnię z przesuwnymi drzwiami.',
+      title: 'Stylowa łazienka z wanną, pralką i widokiem na sypialnię z przesuwnymi drzwiami.'
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      alt: "Hallway",
-      title: t('hallway')
-    }
+      src: "https://github.com/groszeck/Warsaw-Apartment-Listing-Page-5544/blob/main/src/assets/images/5.jpg?raw=true",
+      alt: 'Sypialnia z dużym łóżkiem, szafą z lustrzanymi drzwiami i wyjściem na balkon.',
+      title: 'Sypialnia z dużym łóżkiem, szafą z lustrzanymi drzwiami i wyjściem na balkon.'
+    },
+    {
+      id: 7,
+      src: "https://github.com/groszeck/Warsaw-Apartment-Listing-Page-5544/blob/main/src/assets/images/6.jpg?raw=true",
+      alt: 'Nowoczesna łazienka z prysznicem typu walk-in i podświetlanym lustrem.',
+      title: 'Nowoczesna łazienka z prysznicem typu walk-in i podświetlanym lustrem.'
+    },
+    {
+      id: 8,
+      src: "https://github.com/groszeck/Warsaw-Apartment-Listing-Page-5544/blob/main/src/assets/images/7.jpg?raw=true",
+      alt: 'Jasny korytarz prowadzący do kuchni i salonu – wygodny układ mieszkania.',
+      title: 'Jasny korytarz prowadzący do kuchni i salonu – wygodny układ mieszkania.'
+    },
+    {
+      id: 9,
+      src: "https://github.com/groszeck/Warsaw-Apartment-Listing-Page-5544/blob/main/src/assets/images/8.jpg?raw=true",
+      alt: 'Funkcjonalna kuchnia z pełnym wyposażeniem i dużym blatem roboczym.',
+      title: 'Funkcjonalna kuchnia z pełnym wyposażeniem i dużym blatem roboczym.'
+    },
+    {
+      id: 10,
+      src: "https://github.com/groszeck/Warsaw-Apartment-Listing-Page-5544/blob/main/src/assets/images/9.jpg?raw=true",
+      alt: 'Widok na kuchnię z drugiej strony – elegancka zabudowa i nowoczesny sprzęt.',
+      title: 'Widok na kuchnię z drugiej strony – elegancka zabudowa i nowoczesny sprzęt.'
+    },
+    {
+      id: 11,
+      src: "https://github.com/groszeck/Warsaw-Apartment-Listing-Page-5544/blob/main/src/assets/images/9b.jpg?raw=true",
+      alt: 'Balkon z widokiem na zielone patio – idealne miejsce na poranną kawę.',
+      title: 'Balkon z widokiem na zielone patio – idealne miejsce na poranną kawę.'
+    },
   ];
 
   const nextImage = () => {

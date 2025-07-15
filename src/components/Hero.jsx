@@ -175,7 +175,7 @@ const Hero = ({ onContactClick }) => {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src="https://github.com/groszeck/Warsaw-Apartment-Listing-Page-5544/blob/main/src/assets/images/1.jpg?raw=true"
                 alt="Modern apartment interior"
                 className="w-full h-[600px] object-cover"
               />

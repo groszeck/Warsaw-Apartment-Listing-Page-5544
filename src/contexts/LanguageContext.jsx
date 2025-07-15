@@ -103,7 +103,7 @@ const translations = {
     elevatorDescription: "Wygodny dostęp do mieszkania",
     apartmentDetails: "Szczegóły mieszkania",
     totalArea: "Powierzchnia całkowita",
-    basementArea: "Powierzchnia piwnicy",
+    basementArea: "własna komórka lokatorska obok mieszkania",
     floors: "Pięter w budynku",
     buildingMaterial: "Materiał budynku",
     
@@ -271,7 +271,7 @@ const translations = {
     elevatorDescription: "Convenient access to apartment",
     apartmentDetails: "Apartment details",
     totalArea: "Total area",
-    basementArea: "Basement area",
+    basementArea: "Private storage room next to the apartment",
     floors: "Floors in building",
     buildingMaterial: "Building material",
     
@@ -439,7 +439,7 @@ const translations = {
     elevatorDescription: "Bequemer Zugang zur Wohnung",
     apartmentDetails: "Wohnungsdetails",
     totalArea: "Gesamtfläche",
-    basementArea: "Kellerfläche",
+    basementArea: "Eigener Abstellraum neben der Wohnung",
     floors: "Etagen im Gebäude",
     buildingMaterial: "Baumaterial",
     
@@ -607,7 +607,7 @@ const translations = {
     elevatorDescription: "Зручний доступ до квартири",
     apartmentDetails: "Деталі квартири",
     totalArea: "Загальна площа",
-    basementArea: "Площа підвалу",
+    basementArea: "Власна кладова поруч із квартирою",
     floors: "Поверхів у будинку",
     buildingMaterial: "Матеріал будинку",
     
@@ -775,7 +775,7 @@ const translations = {
     elevatorDescription: "Удобный доступ к квартире",
     apartmentDetails: "Детали квартиры",
     totalArea: "Общая площадь",
-    basementArea: "Площадь подвала",
+    basementArea: "Собственная кладовая рядом с квартирой",
     floors: "Этажей в здании",
     buildingMaterial: "Материал здания",
     

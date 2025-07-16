@@ -20,9 +20,13 @@ const LanguageSelector = () => {
         whileTap={{ scale: 0.95 }}
       >
         <SafeIcon icon={FiGlobe} className="w-4 h-4" />
-        <span className="text-2xl font-emoji" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>
-          {currentLang.flag}
-        </span>
+        {/* Flaga */}
+        <img
+          src={currentLang.flag}
+          alt={currentLang.code}
+          className="w-6 h-6 rounded-full object-cover border border-gray-300 shadow-sm"
+          style={{ background: '#fff' }}
+        />
         <span className="font-medium text-sm">{currentLang.code.toUpperCase()}</span>
         <SafeIcon 
           icon={FiChevronDown} 
@@ -53,12 +57,13 @@ const LanguageSelector = () => {
                   backgroundColor: currentLanguage === code ? '#dbeafe' : '#f9fafb' 
                 }}
               >
-                <span 
-                  className="text-xl font-emoji" 
-                  style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}
-                >
-                  {lang.flag}
-                </span>
+                {/* Flaga */}
+                <img
+                  src={lang.flag}
+                  alt={lang.code}
+                  className="w-6 h-6 rounded-full object-cover border border-gray-300 shadow-sm"
+                  style={{ background: '#fff' }}
+                />
                 <div className="flex-1">
                   <div className="font-medium text-sm">{lang.name}</div>
                   <div className="text-xs text-gray-500">{code.toUpperCase()}</div>

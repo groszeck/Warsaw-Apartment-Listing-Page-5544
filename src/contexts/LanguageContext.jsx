@@ -17,27 +17,27 @@ export const LanguageProvider = ({ children }) => {
     pl: {
       code: 'pl',
       name: 'Polski',
-      flag: '🇵🇱'
+      flag: 'https://flagcdn.com/pl.svg'
     },
     en: {
       code: 'en',
       name: 'English',
-      flag: '🇬🇧'
+      flag: 'https://flagcdn.com/gb.svg'
     },
     de: {
       code: 'de',
       name: 'Deutsch',
-      flag: '🇩🇪'
+      flag: 'https://flagcdn.com/de.svg'
     },
     ua: {
       code: 'ua',
       name: 'Українська',
-      flag: '🇺🇦'
+      flag: 'https://flagcdn.com/ua.svg'
     },
     ru: {
       code: 'ru',
       name: 'Русский',
-      flag: '🇷🇺'
+      flag: 'https://flagcdn.com/ru.svg'
     }
   };
 

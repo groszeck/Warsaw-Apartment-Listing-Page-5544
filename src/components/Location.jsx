@@ -15,7 +15,7 @@ const Location = () => {
       icon: MdTrain, // pociąg dla Metro Ulrychów (poprawna ikona)
       title: t('metro'),
       description: t('metroDistance'),
-      distance: t('walkTime')
+      distance: t('metroWalkTime')
     },
     {
       icon: FiShoppingCart,
@@ -27,7 +27,7 @@ const Location = () => {
       icon: FaTree, // drzewo dla parków (poprawna ikona)
       title: t('parks'),
       description: t('parksDescription'),
-      distance: t('nearby')
+      distance: t('parksList')
     },
     {
       icon: FiNavigation,

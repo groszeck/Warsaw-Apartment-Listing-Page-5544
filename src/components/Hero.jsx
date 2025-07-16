@@ -205,7 +205,7 @@ const Hero = ({ onContactClick, isVideoOpen, setIsVideoOpen }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black backdrop-blur-sm"
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
@@ -242,7 +242,7 @@ const Hero = ({ onContactClick, isVideoOpen, setIsVideoOpen }) => {
                     setIsVideoOpen(false);
                     onContactClick();
                   }}
-                  className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold flex items-center space-x-2 shadow-lg text-lg"
+                  className="mt-4 bg-blue-400 hover:bg-blue-500 text-blue-900 px-8 py-4 rounded-xl font-semibold flex items-center space-x-2 shadow-lg text-lg transition-colors"
                 >
                   <FiIcons.FiPhone className="w-6 h-6 mr-2" />
                   <span>{t('contact')}</span>

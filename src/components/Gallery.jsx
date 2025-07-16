@@ -185,11 +185,20 @@ const Gallery = () => {
                   <SafeIcon icon={FiChevronRight} className="w-6 h-6" />
                 </button>
 
-                {/* Image title */}
-                <div className="absolute bottom-4 left-4 right-4 text-center">
-                  <h3 className="text-white text-xl font-semibold bg-black/50 backdrop-blur-sm rounded-xl px-4 py-2 inline-block">
-                    {selectedImage.title}
-                  </h3>
+                {/* Image title - desktop overlay, mobile pod zdjęciem (do 820px) */}
+                <div>
+                  {/* Desktop: overlay na zdjęciu */}
+                  <div className="hidden 2xl:block absolute bottom-4 left-4 right-4 text-center">
+                    <h3 className="text-white text-xl font-semibold bg-black/50 backdrop-blur-sm rounded-xl px-4 py-2 inline-block">
+                      {selectedImage.title}
+                    </h3>
+                  </div>
+                  {/* Mobile/tablet: pod zdjęciem do 820px */}
+                  <div className="block 2xl:hidden mt-4 text-center">
+                    <h3 className="text-gray-900 text-lg font-semibold bg-white/90 rounded-xl px-4 py-2 inline-block shadow">
+                      {selectedImage.title}
+                    </h3>
+                  </div>
                 </div>
               </motion.div>
             </motion.div>
